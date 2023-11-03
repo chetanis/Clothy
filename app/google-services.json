@@ -1,0 +1,39 @@
+{
+  "project_info": {
+    "project_number": "40974919830",
+    "project_id": "clothy-20c91",
+    "storage_bucket": "clothy-20c91.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:40974919830:android:d9c9a7fbd2c62be97ffab7",
+        "android_client_info": {
+          "package_name": "com.example.clothy"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "40974919830-ahj5j4sfbge67csri0r5osuacafvqe80.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyAMVCLJbBdfFRM3hBvfaZNq9BZWdblXov0"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "40974919830-ahj5j4sfbge67csri0r5osuacafvqe80.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}

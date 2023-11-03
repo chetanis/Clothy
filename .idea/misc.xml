@@ -1,0 +1,51 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="DesignSurface">
+    <option name="filePathToZoomLevelMap">
+      <map>
+        <entry key="app/src/main/res/drawable-v24/loginbtn.xml" value="0.2085" />
+        <entry key="app/src/main/res/drawable/ic_baseline_add_24.xml" value="0.2085" />
+        <entry key="app/src/main/res/drawable/ic_baseline_keyboard_arrow_down_24.xml" value="0.2085" />
+        <entry key="app/src/main/res/drawable/ic_baseline_search_24.xml" value="0.2085" />
+        <entry key="app/src/main/res/drawable/ic_close.xml" value="0.2085" />
+        <entry key="app/src/main/res/drawable/ic_launcher_background.xml" value="0.2085" />
+        <entry key="app/src/main/res/drawable/searchview_bg.xml" value="0.2085" />
+        <entry key="app/src/main/res/drawable/splash_bk.xml" value="0.2085" />
+        <entry key="app/src/main/res/drawable/splashck.xml" value="0.2085" />
+        <entry key="app/src/main/res/font/questa_grande.xml" value="0.34010416666666665" />
+        <entry key="app/src/main/res/layout/activity_add_product.xml" value="0.3098958333333333" />
+        <entry key="app/src/main/res/layout/activity_checkout.xml" value="0.3098958333333333" />
+        <entry key="app/src/main/res/layout/activity_home.xml" value="0.3098958333333333" />
+        <entry key="app/src/main/res/layout/activity_login.xml" value="0.3098958333333333" />
+        <entry key="app/src/main/res/layout/activity_main.xml" value="0.3098958333333333" />
+        <entry key="app/src/main/res/layout/activity_product_details.xml" value="0.31316528320312503" />
+        <entry key="app/src/main/res/layout/activity_search_result.xml" value="0.24583333333333332" />
+        <entry key="app/src/main/res/layout/activity_signup.xml" value="0.3098958333333333" />
+        <entry key="app/src/main/res/layout/activity_splash.xml" value="0.3098958333333333" />
+        <entry key="app/src/main/res/layout/activity_user_home.xml" value="0.3098958333333333" />
+        <entry key="app/src/main/res/layout/activity_view_all_products.xml" value="0.3098958333333333" />
+        <entry key="app/src/main/res/layout/fragment_admin__home.xml" value="0.3098958333333333" />
+        <entry key="app/src/main/res/layout/fragment_admin_home.xml" value="0.3098958333333333" />
+        <entry key="app/src/main/res/layout/fragment_admin_option.xml" value="0.3098958333333333" />
+        <entry key="app/src/main/res/layout/fragment_cart.xml" value="0.3098958333333333" />
+        <entry key="app/src/main/res/layout/fragment_order.xml" value="0.3098958333333333" />
+        <entry key="app/src/main/res/layout/fragment_orders.xml" value="0.3098958333333333" />
+        <entry key="app/src/main/res/layout/fragment_product.xml" value="0.3098958333333333" />
+        <entry key="app/src/main/res/layout/fragment_profile.xml" value="0.3098958333333333" />
+        <entry key="app/src/main/res/layout/fragment_user_home.xml" value="0.3098958333333333" />
+        <entry key="app/src/main/res/layout/row_cart.xml" value="0.3098958333333333" />
+        <entry key="app/src/main/res/layout/row_order.xml" value="0.3146123250325521" />
+        <entry key="app/src/main/res/layout/row_product.xml" value="0.335" />
+        <entry key="app/src/main/res/layout/row_userproduct.xml" value="0.3098958333333333" />
+        <entry key="app/src/main/res/mipmap-anydpi-v26/ic_launcher.xml" value="0.2085" />
+        <entry key="app/src/main/res/mipmap-anydpi-v26/ic_launcher_round.xml" value="0.2085" />
+      </map>
+    </option>
+  </component>
+  <component name="ProjectRootManager" version="2" languageLevel="JDK_11" project-jdk-name="Android Studio default JDK" project-jdk-type="JavaSDK">
+    <output url="file://$PROJECT_DIR$/build/classes" />
+  </component>
+  <component name="ProjectType">
+    <option name="id" value="Android" />
+  </component>
+</project>

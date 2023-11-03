@@ -1,0 +1,151 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    tools:context=".SignupActivity">
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_marginTop="30dp"
+        android:layout_gravity="center_horizontal"
+        android:layout_height="wrap_content"
+        android:fontFamily="@font/questa_grande_regular"
+        android:text="clothy"
+        android:textColor="@color/blue1"
+        android:textSize="40dp"
+        android:textStyle="bold"
+        android:letterSpacing="0.1">
+
+    </TextView>
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Create Account,"
+        android:textColor="@color/black"
+        android:fontFamily="@font/poppins_medium"
+        android:textSize="30dp"
+        android:layout_marginLeft="20dp"
+        android:layout_marginTop="50dp">
+    </TextView>
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Sign up to get started!"
+        android:letterSpacing="0.03"
+        android:textSize="18dp"
+        android:textColor="#79000000"
+        android:fontFamily="@font/poppins_medium"
+        android:layout_marginLeft="20dp">
+    </TextView>
+
+
+    <androidx.cardview.widget.CardView
+        android:layout_width="match_parent"
+        app:cardCornerRadius="10dp"
+        android:layout_marginHorizontal="20dp"
+        android:layout_marginTop="70dp"
+        android:layout_height="60dp">
+
+        <EditText
+            android:id="@+id/signup_name"
+            android:background="#00FFFFFF"
+            android:paddingLeft="15dp"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:hint="Full Name"
+            android:fontFamily="@font/poppins_medium"
+            android:ems="10"
+            android:inputType="text" />
+    </androidx.cardview.widget.CardView>
+
+    <androidx.cardview.widget.CardView
+        android:layout_width="match_parent"
+        app:cardCornerRadius="10dp"
+        android:layout_marginHorizontal="20dp"
+        android:layout_marginTop="20dp"
+        android:layout_height="60dp">
+
+        <EditText
+            android:background="#00FFFFFF"
+            android:paddingLeft="15dp"
+            android:id="@+id/signup_email"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:hint="Email ID"
+            android:fontFamily="@font/poppins_medium"
+            android:ems="10"
+            android:inputType="textEmailAddress" />
+    </androidx.cardview.widget.CardView>
+    <androidx.cardview.widget.CardView
+        android:layout_width="match_parent"
+        app:cardCornerRadius="10dp"
+        android:layout_marginHorizontal="20dp"
+        android:layout_marginTop="20dp"
+        android:layout_height="60dp">
+        <EditText
+            android:id="@+id/signup_password"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:paddingLeft="15dp"
+            android:background="#00FFFFFF"
+            android:hint="Password"
+            android:fontFamily="@font/poppins_medium"
+            android:ems="10"
+            android:inputType="textPassword" />
+    </androidx.cardview.widget.CardView>
+
+
+    <androidx.appcompat.widget.AppCompatButton
+        android:id="@+id/signup_button"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:textColor="@color/white"
+        android:layout_marginHorizontal="20dp"
+        android:textSize="20dp"
+        android:textAllCaps="false"
+        android:layout_marginTop="60dp"
+        android:background="@drawable/loginbtn"
+        android:fontFamily="@font/poppins_medium"
+        android:text="Sign Up" />
+
+    <androidx.appcompat.widget.AppCompatButton
+        android:id="@+id/googlesignup_button"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:textColor="@color/white"
+        android:layout_marginHorizontal="20dp"
+        android:textSize="20dp"
+        android:textAllCaps="false"
+        android:layout_marginTop="20dp"
+        android:background="@drawable/loginbtn"
+        android:fontFamily="@font/poppins_medium"
+        android:text="T3 google" />
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:orientation="horizontal"
+        android:layout_marginBottom="30dp"
+        android:gravity="bottom|center">
+        <TextView
+            android:layout_width="wrap_content"
+            android:textColor="@color/black"
+            android:fontFamily="@font/poppins_medium"
+            android:layout_height="wrap_content"
+            android:text="I'm already a member,">
+        </TextView>
+        <TextView
+            android:id="@+id/goto_login"
+            android:layout_width="wrap_content"
+            android:layout_marginLeft="2dp"
+            android:textColor="@color/blue1"
+            android:textStyle="bold"
+            android:fontFamily="@font/poppins_medium"
+            android:layout_height="wrap_content"
+            android:text="Sign In">
+
+        </TextView>
+    </LinearLayout>
+
+</LinearLayout>

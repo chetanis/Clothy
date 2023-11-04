@@ -4,6 +4,7 @@ import androidx.annotation.NonNull;
 import androidx.appcompat.app.AppCompatActivity;
 import androidx.appcompat.widget.AppCompatButton;
 
+import android.app.ProgressDialog;
 import android.content.Intent;
 import android.os.Bundle;
 import android.view.View;
@@ -21,6 +22,7 @@ import com.google.firebase.auth.FirebaseAuth;
 public class LoginActivity extends AppCompatActivity {
     EditText email,password;
     AppCompatButton login;
+    ProgressDialog loading;
     FirebaseAuth auth;
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -39,6 +41,7 @@ public class LoginActivity extends AppCompatActivity {
             @Override
             public void onClick(View view) {
                 if (test()){
+                    loading.show();
                     Login();
                 }
             }
@@ -50,10 +53,7 @@ public class LoginActivity extends AppCompatActivity {
             email.setError("fill the email");
             return  false;
         }else if (password.getText().toString().isEmpty()){
-            password.setError("fill the email");
-            return  false;
-        }else if (login.getText().toString().isEmpty()){
-            login.setError("fill the email");
+            password.setError("fill the password");
             return  false;
         }
         return true;
@@ -63,6 +63,8 @@ public class LoginActivity extends AppCompatActivity {
         password = findViewById(R.id.login_password);
         login = findViewById(R.id.login_button);
         auth = FirebaseAuth.getInstance();
+        loading = new ProgressDialog(this);
+        loading.setMessage("Please wait");
     }
     private void Login(){
         auth.signInWithEmailAndPassword(email.getText().toString(),password.getText().toString())
@@ -70,10 +72,12 @@ public class LoginActivity extends AppCompatActivity {
             @Override
             public void onComplete(@NonNull Task<AuthResult> task) {
                 if (task.isSuccessful()){
+                    loading.dismiss();
                     Intent i = new Intent(LoginActivity.this, UserHome.class);
                     startActivity(i);
                     finish();
                 }else{
+                    loading.dismiss();
                     Toast.makeText(LoginActivity.this, task.getException().toString(), Toast.LENGTH_SHORT).show();
                 }
             }

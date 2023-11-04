@@ -4,6 +4,7 @@ import androidx.annotation.NonNull;
 import androidx.appcompat.app.AppCompatActivity;
 import androidx.appcompat.widget.AppCompatButton;
 
+import android.app.ProgressDialog;
 import android.content.Intent;
 import android.os.Bundle;
 import android.view.View;
@@ -23,10 +24,11 @@ import com.google.firebase.database.FirebaseDatabase;
 
 public class SignupActivity extends AppCompatActivity {
     EditText name,email,password;
-    AppCompatButton signup,signupgoogle;
+    AppCompatButton signup;
     TextView goto_login;
     FirebaseAuth auth;
     DatabaseReference userref;
+    ProgressDialog loading;
 
 
     @Override
@@ -44,6 +46,7 @@ public class SignupActivity extends AppCompatActivity {
             @Override
             public void onClick(View view) {
                 if (test()){
+                    loading.show();
                     CreateAnAccount();
                 }
             }
@@ -59,9 +62,10 @@ public class SignupActivity extends AppCompatActivity {
         email = findViewById(R.id.signup_email);
         password = findViewById(R.id.signup_password);
         signup = findViewById(R.id.signup_button);
-        signupgoogle = findViewById(R.id.googlesignup_button);
         auth = FirebaseAuth.getInstance();
         userref = FirebaseDatabase.getInstance(getString(R.string.DB)).getReference().child("Users");
+        loading = new ProgressDialog(this);
+        loading.setMessage("Please wait");
     }
 
 
@@ -89,6 +93,7 @@ public class SignupActivity extends AppCompatActivity {
                             User user = new User(email.getText().toString(),name.getText().toString());
                             saveUserDataInDB(user);
                         }else {
+                            loading.dismiss();
                             Toast.makeText(SignupActivity.this,"error",Toast.LENGTH_SHORT).show();
                         }
                     }
@@ -101,10 +106,12 @@ public class SignupActivity extends AppCompatActivity {
             @Override
             public void onComplete(@NonNull Task<Void> task) {
                 if (task.isSuccessful()){
+                    loading.dismiss();
                     Intent i = new Intent(SignupActivity.this, UserHome.class);
                     startActivity(i);
                     finish();
                 }else {
+                    loading.dismiss();
                     Toast.makeText(SignupActivity.this, task.getException().toString(), Toast.LENGTH_SHORT).show();
                 }
             }

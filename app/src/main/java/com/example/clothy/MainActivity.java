@@ -32,11 +32,14 @@ public class MainActivity extends AppCompatActivity {
 //                userref.setValue(s);
 //            }
 //        });
+
+        //adding splash screen for 0.7 second
         Thread thread = new Thread(){
             @Override
             public void run() {
                 super.run();
                 try {
+
                     sleep(700);
                 }catch (Exception e){
 

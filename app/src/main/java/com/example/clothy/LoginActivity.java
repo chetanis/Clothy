@@ -24,15 +24,17 @@ public class LoginActivity extends AppCompatActivity {
     AppCompatButton login;
     ProgressDialog loading;
     FirebaseAuth auth;
+    TextView goto_signup;
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_login);
-        TextView goto_signup=findViewById(R.id.goto_signup);
+        // Initialize UI elements
         elem();
         goto_signup.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
+                // Navigate to the SignupActivity when the "goto_signup" TextView is clicked
                 Intent i = new Intent(LoginActivity.this,SignupActivity.class);
                 startActivity(i);
             }
@@ -41,6 +43,7 @@ public class LoginActivity extends AppCompatActivity {
             @Override
             public void onClick(View view) {
                 if (test()){
+                    // If validation passes, show a progress dialog and perform login
                     loading.show();
                     Login();
                 }
@@ -48,6 +51,7 @@ public class LoginActivity extends AppCompatActivity {
         });
     }
 
+    // Function to perform input validation
     private boolean test(){
         if (email.getText().toString().isEmpty()){
             email.setError("fill the email");
@@ -58,7 +62,10 @@ public class LoginActivity extends AppCompatActivity {
         }
         return true;
     }
+
+    // Function to initialize UI elements and Firebase authentication
     private void elem(){
+        goto_signup = findViewById(R.id.goto_signup);
         email = findViewById(R.id.login_email);
         password = findViewById(R.id.login_password);
         login = findViewById(R.id.login_button);
@@ -66,6 +73,8 @@ public class LoginActivity extends AppCompatActivity {
         loading = new ProgressDialog(this);
         loading.setMessage("Please wait");
     }
+
+    // Function to perform user login using Firebase authentication
     private void Login(){
         auth.signInWithEmailAndPassword(email.getText().toString(),password.getText().toString())
                 .addOnCompleteListener(new OnCompleteListener<AuthResult>() {
